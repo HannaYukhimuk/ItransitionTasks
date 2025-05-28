@@ -36,10 +36,7 @@
 
     private int CountTies(Dice dice)
     {
-        int ties = 0;
-        foreach (var faceA in dice.Faces)
-            foreach (var faceB in dice.Faces)
-                if (faceA == faceB) ties++;
-        return ties;
+        return dice.Faces.Sum(faceA =>
+               dice.Faces.Count(faceB => faceA == faceB));
     }
 }

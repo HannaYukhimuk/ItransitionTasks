@@ -1,4 +1,4 @@
-﻿public interface IFairRandomGenerator : IDisposable
+﻿public interface IFairRandomGenerator
 {
     int Next(int minValue, int maxValue);
 }

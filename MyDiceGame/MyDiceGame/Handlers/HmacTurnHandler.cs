@@ -118,7 +118,7 @@ public class HmacTurnHandler : IHmacTurnHandler
         var lines = new List<string>
         {
             $"Computer's number: {computerNumber}",
-            $"Secret key: {BitConverter.ToString(secret).Replace("-", "")}",
+            $"Secret key: {Convert.ToHexString(secret)}",
             $"Result: ({computerNumber} + {userNumber}) mod {range} = {result}"
         };
 
